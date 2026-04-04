@@ -162,6 +162,9 @@ public class frmPhong extends JFrame {
         setSize(1000, 650);
         setLocationRelativeTo(null);
 
+        // ── Thêm menu bar chung ──
+        setJMenuBar(MenuBarFactory.createMenuBar());
+
         // Load dữ liệu ban đầu
         loadToaNha();
         loadAllPhong();

@@ -155,6 +155,9 @@ public class frmSinhVien extends JFrame {
         setSize(1000, 600);
         setLocationRelativeTo(null);
 
+        // ── Thêm menu bar chung ──
+        setJMenuBar(MenuBarFactory.createMenuBar());
+
         // Load dữ liệu ban đầu
         loadPhong();
         loadAllSinhVien();
