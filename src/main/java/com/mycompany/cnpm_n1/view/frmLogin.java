@@ -1,4 +1,4 @@
-package com.mycompany.cnpm_n1;
+package com.mycompany.cnpm_n1.view;
 
 import javax.swing.*;
 import java.awt.*;

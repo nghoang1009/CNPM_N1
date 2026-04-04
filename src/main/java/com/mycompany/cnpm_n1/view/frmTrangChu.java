@@ -1,4 +1,4 @@
-package com.mycompany.cnpm_n1;
+package com.mycompany.cnpm_n1.view;
 
 import javax.swing.*;
 import java.awt.*;
@@ -79,7 +79,18 @@ public class frmTrangChu extends JFrame{
         menuBar.add(menuHeThong);
 
         setJMenuBar(menuBar);
+        
+        mSinhVien.addActionListener(e ->{
+            frmSinhVien frmSinhVien = new frmSinhVien();
+            frmSinhVien.setVisible(true);
+        });
+
+        mPhong.addActionListener(e ->{
+            frmPhong frmPhong = new frmPhong();
+            frmPhong.setVisible(true);
+        });
     }
+
 
     public static void main(String[] args) {
         frmTrangChu frmTrangChu = new frmTrangChu();
