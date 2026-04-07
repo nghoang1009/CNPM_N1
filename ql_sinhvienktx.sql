@@ -231,6 +231,31 @@ INSERT INTO `toa_nha` (`id`, `ma_toa`, `ten_toa`, `so_tang`, `gioi_tinh`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `noi_quy`
+--
+
+CREATE TABLE `noi_quy` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `tieu_de` varchar(255) NOT NULL,
+  `noi_dung` longtext NOT NULL,
+  `muc_phat` decimal(12,2) DEFAULT 0.00,
+  `trang_thai` tinyint(1) DEFAULT 1,
+  `ngay_tao` datetime DEFAULT CURRENT_TIMESTAMP,
+  `ngay_cap_nhat` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `noi_quy`
+--
+
+INSERT INTO `noi_quy` (`id`, `tieu_de`, `noi_dung`, `muc_phat`, `trang_thai`) VALUES
+(1, 'Cấm huỷ hoại tài sản', 'Sinh viên không được huỷ hoại hoặc làm hư hỏng tài sản của ký túc xá', 500000.00, 1),
+(2, 'Cấm gây ồn ào', 'Yêu cầu giảm tiếng ồn sau 22h tối', 200000.00, 1),
+(3, 'Vệ sinh chung', 'Phải dọn dẹp phòng ở tình trạng sạch sẽ', 300000.00, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `vai_tro`
 --
 
@@ -281,6 +306,12 @@ ALTER TABLE `hop_dong`
 -- Chỉ mục cho bảng `loai_phong`
 --
 ALTER TABLE `loai_phong`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `noi_quy`
+--
+ALTER TABLE `noi_quy`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -342,6 +373,12 @@ ALTER TABLE `hoa_don`
 -- AUTO_INCREMENT cho bảng `hop_dong`
 --
 ALTER TABLE `hop_dong`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT cho bảng `noi_quy`
+--
+ALTER TABLE `noi_quy`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --

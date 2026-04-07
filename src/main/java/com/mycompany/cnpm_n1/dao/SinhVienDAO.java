@@ -5,6 +5,8 @@ import com.mycompany.cnpm_n1.model.SinhVien;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.LinkedHashMap;
 
 public class SinhVienDAO {
 
@@ -150,6 +152,17 @@ public class SinhVienDAO {
             e.printStackTrace();
         }
         return false;
+    }
+
+    // ============ LOOKUP: Map Sinh Viên ============
+    public static Map<String, Integer> getSinhVienMap() {
+        Map<String, Integer> map = new LinkedHashMap<>();
+        List<SinhVien> list = getAllSinhVien();
+        for (SinhVien sv : list) {
+            String displayText = sv.getMaSinhVien() + " - " + sv.getHoTen();
+            map.put(displayText, sv.getId());
+        }
+        return map;
     }
 
     // Helper: map ResultSet -> SinhVien

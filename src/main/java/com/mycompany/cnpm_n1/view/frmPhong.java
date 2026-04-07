@@ -38,6 +38,9 @@ public class frmPhong extends JFrame {
         super("Quản lý phòng KTX");
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
+        // Thêm menu bar
+        setJMenuBar(MenuBarFactory.createMenuBar());
+
         // Tiêu đề
         JLabel lbTitle = new JLabel("QUẢN LÝ PHÒNG KTX", JLabel.CENTER);
         lbTitle.setForeground(Color.blue);

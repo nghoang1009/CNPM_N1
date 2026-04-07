@@ -25,6 +25,21 @@ public class MenuBarFactory {
         JMenuItem mHoaDon = new JMenuItem("QL Hóa đơn");
         menuHoaDon.add(mHoaDon);
 
+        // Menu Hợp Đồng
+        JMenu menuHopDong = new JMenu("Hợp Đồng");
+        JMenuItem mHopDong = new JMenuItem("QL Hợp Đồng");
+        menuHopDong.add(mHopDong);
+
+        // Menu Nội Quy
+        JMenu menuNoiQuy = new JMenu("Nội Quy");
+        JMenuItem mNoiQuy = new JMenuItem("QL Nội Quy");
+        menuNoiQuy.add(mNoiQuy);
+
+        // Menu Báo Cáo
+        JMenu menuBaoCao = new JMenu("Báo Cáo");
+        JMenuItem mBaoCao = new JMenuItem("Báo Cáo & Thống Kê");
+        menuBaoCao.add(mBaoCao);
+
         // Menu Hệ thống
         JMenu menuHeThong = new JMenu("Hệ thống");
         JMenuItem mDangXuat = new JMenuItem("Đăng xuất");
@@ -37,6 +52,9 @@ public class MenuBarFactory {
         menuBar.add(menuSinhVien);
         menuBar.add(menuPhong);
         menuBar.add(menuHoaDon);
+        menuBar.add(menuHopDong);
+        menuBar.add(menuNoiQuy);
+        menuBar.add(menuBaoCao);
         menuBar.add(menuHeThong);
 
         // ── Events ──
@@ -78,6 +96,18 @@ public class MenuBarFactory {
 
         mHoaDon.addActionListener(e -> {
             JOptionPane.showMessageDialog(null, "Chức năng Quản lý Hóa đơn chưa được xây dựng!");
+        });
+
+        mHopDong.addActionListener(e -> {
+            new frmHopDong().setVisible(true);
+        });
+
+        mNoiQuy.addActionListener(e -> {
+            new frmNoiQuy().setVisible(true);
+        });
+
+        mBaoCao.addActionListener(e -> {
+            new frmBaoCao().setVisible(true);
         });
 
         mDangXuat.addActionListener(e -> {

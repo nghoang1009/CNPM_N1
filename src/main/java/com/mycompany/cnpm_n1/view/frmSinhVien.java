@@ -39,6 +39,9 @@ public class frmSinhVien extends JFrame {
         super("Quản lý sinh viên và phòng KTX");
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
+        // Thêm menu bar
+        setJMenuBar(MenuBarFactory.createMenuBar());
+
         // Tiêu đề
         JLabel lbTitle = new JLabel("QUẢN LÝ SINH VIÊN KTX", JLabel.CENTER);
         lbTitle.setForeground(Color.blue);
