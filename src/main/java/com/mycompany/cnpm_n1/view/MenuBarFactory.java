@@ -95,7 +95,7 @@ public class MenuBarFactory {
         });
 
         mHoaDon.addActionListener(e -> {
-            JOptionPane.showMessageDialog(null, "Chức năng Quản lý Hóa đơn chưa được xây dựng!");
+            new frmHoaDon().setVisible(true);
         });
 
         mHopDong.addActionListener(e -> {

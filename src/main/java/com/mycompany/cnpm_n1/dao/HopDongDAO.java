@@ -5,6 +5,8 @@ import com.mycompany.cnpm_n1.model.HopDong;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.LinkedHashMap;
 
 public class HopDongDAO {
 
@@ -126,6 +128,17 @@ public class HopDongDAO {
             e.printStackTrace();
             return false;
         }
+    }
+
+    // ============ LOOKUP: Map Hợp Đồng ============
+    public static Map<String, Integer> getHopDongMap() {
+        Map<String, Integer> map = new LinkedHashMap<>();
+        List<HopDong> list = getAllHopDong();
+        for (HopDong hd : list) {
+            String displayText = "HĐ-" + hd.getId() + " (" + hd.getNgayBatDau() + " - " + hd.getNgayKetThuc() + ")";
+            map.put(displayText, hd.getId());
+        }
+        return map;
     }
 
     // Helper: Map ResultSet to HopDong object
