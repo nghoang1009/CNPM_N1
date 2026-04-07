@@ -1,6 +1,7 @@
 package com.mycompany.cnpm_n1.view;
 
 import javax.swing.*;
+import com.mycompany.cnpm_n1.util.PermissionManager;
 
 public class MenuBarFactory {
     public static JMenuBar createMenuBar() {
@@ -49,13 +50,39 @@ public class MenuBarFactory {
 
         // Thêm vào menuBar
         menuBar.add(menuTrangChu);
-        menuBar.add(menuSinhVien);
-        menuBar.add(menuPhong);
+        
+        // Chỉ Quản lý (Admin & Nhân viên) mới quản lý Sinh viên
+        if (PermissionManager.isAdminOrNhanVien()) {
+            menuBar.add(menuSinhVien);
+        }
+        
+        // Chỉ Quản lý mới quản lý Phòng (Sinh viên chỉ xem)
+        if (PermissionManager.isAdminOrNhanVien()) {
+            menuBar.add(menuPhong);
+        }
+        
+        // Ai cũng xem được Hóa đơn (Sinh viên thanh toán)
         menuBar.add(menuHoaDon);
+        
+        // Ai cũng xem được Hợp đồng
         menuBar.add(menuHopDong);
+        
+        // Ai cũng xem được Nội quy
         menuBar.add(menuNoiQuy);
-        menuBar.add(menuBaoCao);
+        
+        // Chỉ Quản lý xem báo cáo thống kê
+        if (PermissionManager.isAdminOrNhanVien()) {
+            menuBar.add(menuBaoCao);
+        }
+        
         menuBar.add(menuHeThong);
+        
+        // Thêm label hiển thị user đang đăng nhập
+        menuBar.add(Box.createHorizontalGlue());
+        JLabel lblUser = new JLabel("Người dùng: " + PermissionManager.getCurrentUser() + 
+                                    " (" + PermissionManager.getRoleName() + ")");
+        lblUser.setBorder(BorderFactory.createEmptyBorder(0, 10, 0, 10));
+        menuBar.add(lblUser);
 
         // ── Events ──
         mTrangChu.addActionListener(e -> {
@@ -87,19 +114,39 @@ public class MenuBarFactory {
         });
 
         mSinhVien.addActionListener(e -> {
-            new frmSinhVien().setVisible(true);
+            if (PermissionManager.canViewSinhVien()) {
+                new frmSinhVien().setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Bạn không có quyền truy cập mục này!", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
         });
 
         mPhong.addActionListener(e -> {
-            new frmPhong().setVisible(true);
+            if (PermissionManager.canViewPhong()) {
+                new frmPhong().setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Bạn không có quyền truy cập mục này!", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
         });
 
         mHoaDon.addActionListener(e -> {
-            new frmHoaDon().setVisible(true);
+            if (PermissionManager.canViewHoaDon()) {
+                new frmHoaDon().setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Bạn không có quyền truy cập mục này!", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
         });
 
         mHopDong.addActionListener(e -> {
-            new frmHopDong().setVisible(true);
+            if (PermissionManager.canViewHopDong()) {
+                new frmHopDong().setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Bạn không có quyền truy cập mục này!", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
         });
 
         mNoiQuy.addActionListener(e -> {
@@ -107,7 +154,12 @@ public class MenuBarFactory {
         });
 
         mBaoCao.addActionListener(e -> {
-            new frmBaoCao().setVisible(true);
+            if (PermissionManager.canViewBaoCao()) {
+                new frmBaoCao().setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Bạn không có quyền truy cập mục này!", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
         });
 
         mDangXuat.addActionListener(e -> {

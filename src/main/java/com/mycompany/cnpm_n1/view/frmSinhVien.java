@@ -4,6 +4,7 @@ import com.mycompany.cnpm_n1.dao.PhongDAO;
 import com.mycompany.cnpm_n1.dao.SinhVienDAO;
 import com.mycompany.cnpm_n1.model.Phong;
 import com.mycompany.cnpm_n1.model.SinhVien;
+import com.mycompany.cnpm_n1.util.PermissionManager;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -164,6 +165,13 @@ public class frmSinhVien extends JFrame {
         // Load dữ liệu ban đầu
         loadPhong();
         loadAllSinhVien();
+        
+        // Disable buttons nếu không có quyền edit
+        if (!PermissionManager.canEditSinhVien()) {
+            btThem.setEnabled(false);
+            btSua.setEnabled(false);
+            btXoa.setEnabled(false);
+        }
 
         // ════════════════════════════════════════
         // EVENTS
@@ -205,9 +213,33 @@ public class frmSinhVien extends JFrame {
         btnDeletePhong.addActionListener(e -> XoaPhong());
 
         // ── Events SINH VIÊN ──
-        btThem.addActionListener(e -> ThemSV());
-        btSua.addActionListener(e -> SuaSV());
-        btXoa.addActionListener(e -> XoaSV());
+        btThem.addActionListener(e -> {
+            if (PermissionManager.canEditSinhVien()) {
+                ThemSV();
+            } else {
+                JOptionPane.showMessageDialog(this, "Bạn không có quyền thực hiện thao tác này!", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
+        });
+        
+        btSua.addActionListener(e -> {
+            if (PermissionManager.canEditSinhVien()) {
+                SuaSV();
+            } else {
+                JOptionPane.showMessageDialog(this, "Bạn không có quyền thực hiện thao tác này!", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
+        });
+        
+        btXoa.addActionListener(e -> {
+            if (PermissionManager.canEditSinhVien()) {
+                XoaSV();
+            } else {
+                JOptionPane.showMessageDialog(this, "Bạn không có quyền thực hiện thao tác này!", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
+        });
+        
         btXoaTrang.addActionListener(e -> XoaTrang());
     }
 

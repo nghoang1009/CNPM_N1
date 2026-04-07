@@ -7,6 +7,7 @@ import com.mycompany.cnpm_n1.dao.PhongDAO;
 import com.mycompany.cnpm_n1.model.HoaDon;
 import com.mycompany.cnpm_n1.model.SinhVien;
 import com.mycompany.cnpm_n1.model.Phong;
+import com.mycompany.cnpm_n1.util.PermissionManager;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -153,9 +154,30 @@ public class frmHoaDon extends JFrame {
         btnPanel.add(btnClear);
         btnPanel.add(btnRefresh);
 
-        btnAdd.addActionListener(e -> handleThemHoaDon());
-        btnEdit.addActionListener(e -> handleSuaHoaDon());
-        btnDelete.addActionListener(e -> handleXoaHoaDon());
+        btnAdd.addActionListener(e -> {
+            if (PermissionManager.canEditHoaDon()) {
+                handleThemHoaDon();
+            } else {
+                JOptionPane.showMessageDialog(this, "Bạn không có quyền thêm hóa đơn", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
+        });
+        btnEdit.addActionListener(e -> {
+            if (PermissionManager.canEditHoaDon()) {
+                handleSuaHoaDon();
+            } else {
+                JOptionPane.showMessageDialog(this, "Bạn không có quyền sửa hóa đơn", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
+        });
+        btnDelete.addActionListener(e -> {
+            if (PermissionManager.canEditHoaDon()) {
+                handleXoaHoaDon();
+            } else {
+                JOptionPane.showMessageDialog(this, "Bạn không có quyền xóa hóa đơn", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
+        });
         btnClear.addActionListener(e -> clearForm());
         btnRefresh.addActionListener(e -> loadDataFromDatabase());
 
@@ -172,6 +194,18 @@ public class frmHoaDon extends JFrame {
         setSize(1000, 600);
         setLocationRelativeTo(null);
         loadDataFromDatabase();
+        
+        // Disable Add/Delete buttons nếu sinh viên (chỉ cho thanh toán)
+        if (PermissionManager.isSinhVien()) {
+            for (java.awt.Component comp : btnPanel.getComponents()) {
+                if (comp instanceof JButton) {
+                    String text = ((JButton) comp).getText();
+                    if (text.equals("Thêm mới") || text.equals("Xóa")) {
+                        comp.setEnabled(false);
+                    }
+                }
+            }
+        }
     }
 
     private void loadDataFromDatabase() {

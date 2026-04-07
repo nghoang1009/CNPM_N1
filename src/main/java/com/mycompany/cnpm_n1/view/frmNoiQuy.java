@@ -2,6 +2,7 @@ package com.mycompany.cnpm_n1.view;
 
 import com.mycompany.cnpm_n1.dao.NoiQuyDAO;
 import com.mycompany.cnpm_n1.model.NoiQuy;
+import com.mycompany.cnpm_n1.util.PermissionManager;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -124,9 +125,30 @@ public class frmNoiQuy extends JFrame {
         btnPanel.add(btnClear);
         btnPanel.add(btnRefresh);
 
-        btnAdd.addActionListener(e -> handleThemNoiQuy());
-        btnEdit.addActionListener(e -> handleSuaNoiQuy());
-        btnDelete.addActionListener(e -> handleXoaNoiQuy());
+        btnAdd.addActionListener(e -> {
+            if (PermissionManager.canEditNoiQuy()) {
+                handleThemNoiQuy();
+            } else {
+                JOptionPane.showMessageDialog(this, "Bạn không có quyền thêm nội quy", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
+        });
+        btnEdit.addActionListener(e -> {
+            if (PermissionManager.canEditNoiQuy()) {
+                handleSuaNoiQuy();
+            } else {
+                JOptionPane.showMessageDialog(this, "Bạn không có quyền sửa nội quy", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
+        });
+        btnDelete.addActionListener(e -> {
+            if (PermissionManager.canEditNoiQuy()) {
+                handleXoaNoiQuy();
+            } else {
+                JOptionPane.showMessageDialog(this, "Bạn không có quyền xóa nội quy", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
+        });
         btnClear.addActionListener(e -> clearForm());
         btnRefresh.addActionListener(e -> loadDataFromDatabase());
 
@@ -143,6 +165,18 @@ public class frmNoiQuy extends JFrame {
         setSize(900, 600);
         setLocationRelativeTo(null);
         loadDataFromDatabase();
+        
+        // Disable edit buttons nếu sinh viên (chỉ cho xem)
+        if (PermissionManager.isSinhVien()) {
+            for (java.awt.Component comp : btnPanel.getComponents()) {
+                if (comp instanceof JButton) {
+                    String text = ((JButton) comp).getText();
+                    if (!text.equals("Làm mới") && !text.equals("Refresh")) {
+                        comp.setEnabled(false);
+                    }
+                }
+            }
+        }
     }
 
     private void loadDataFromDatabase() {

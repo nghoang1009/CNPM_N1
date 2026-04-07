@@ -3,6 +3,7 @@ package com.mycompany.cnpm_n1.view;
 import com.mycompany.cnpm_n1.dao.PhongDAO;
 import com.mycompany.cnpm_n1.model.Phong;
 import com.mycompany.cnpm_n1.model.SinhVien;
+import com.mycompany.cnpm_n1.util.PermissionManager;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -142,7 +143,7 @@ public class frmPhong extends JFrame {
         tblSinhVien.setRowHeight(24);
 
         JScrollPane spSV = new JScrollPane(tblSinhVien);
-        spSV.setPreferredSize(new Dimension(500, 150));
+        spSV.setPreferredSize(new Dimension(500, 120));
         JPanel pnSV = new JPanel(new BorderLayout());
         pnSV.setBorder(new TitledBorder(border, "Sinh viên đang ở phòng này"));
         pnSV.add(spSV, BorderLayout.CENTER);
@@ -171,6 +172,19 @@ public class frmPhong extends JFrame {
         // Load dữ liệu ban đầu
         loadToaNha();
         loadAllPhong();
+        
+        // Disable buttons nếu không có quyền edit phòng
+        if (!PermissionManager.canEditPhong()) {
+            for (java.awt.Component comp : pnBtn2.getComponents()) {
+                if (comp instanceof JButton) {
+                    String text = ((JButton) comp).getText();
+                    // Disable Thêm, Sửa, Xóa; giữ lại "Xóa trắng" cho user xóa form
+                    if (text.equals("Thêm") || text.equals("Sửa") || text.equals("Xóa")) {
+                        comp.setEnabled(false);
+                    }
+                }
+            }
+        }
 
         // ════════════════════════════════════════
         // EVENTS
@@ -216,9 +230,30 @@ public class frmPhong extends JFrame {
         btnDeleteToaNha.addActionListener(e -> XoaToaNha());
 
         // ── Events PHÒNG ──
-        btThem.addActionListener(e -> ThemPhong());
-        btSua.addActionListener(e -> SuaPhong());
-        btXoa.addActionListener(e -> XoaPhong());
+        btThem.addActionListener(e -> {
+            if (PermissionManager.canEditPhong()) {
+                ThemPhong();
+            } else {
+                JOptionPane.showMessageDialog(this, "Bạn không có quyền thêm phòng", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
+        });
+        btSua.addActionListener(e -> {
+            if (PermissionManager.canEditPhong()) {
+                SuaPhong();
+            } else {
+                JOptionPane.showMessageDialog(this, "Bạn không có quyền sửa phòng", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
+        });
+        btXoa.addActionListener(e -> {
+            if (PermissionManager.canEditPhong()) {
+                XoaPhong();
+            } else {
+                JOptionPane.showMessageDialog(this, "Bạn không có quyền xóa phòng", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
+        });
         btXoaTrang.addActionListener(e -> XoaTrang());
     }
 

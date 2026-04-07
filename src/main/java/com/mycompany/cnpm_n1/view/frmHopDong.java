@@ -6,6 +6,7 @@ import com.mycompany.cnpm_n1.dao.PhongDAO;
 import com.mycompany.cnpm_n1.model.HopDong;
 import com.mycompany.cnpm_n1.model.SinhVien;
 import com.mycompany.cnpm_n1.model.Phong;
+import com.mycompany.cnpm_n1.util.PermissionManager;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -84,7 +85,7 @@ public class frmHopDong extends JFrame {
         // ════════════════════════════════════════
         // PANEL DƯỚI: Form nhập liệu
         // ════════════════════════════════════════
-        JPanel formPanel = new JPanel(new GridLayout(5, 2, 10, 10));
+        JPanel formPanel = new JPanel(new GridLayout(6, 2, 10, 10));
         formPanel.setBorder(new TitledBorder(border, "Thông tin hợp đồng"));
         formPanel.setPreferredSize(new Dimension(800, 200));
 

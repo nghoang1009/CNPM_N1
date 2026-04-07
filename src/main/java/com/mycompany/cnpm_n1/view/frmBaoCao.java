@@ -1,6 +1,7 @@
 package com.mycompany.cnpm_n1.view;
 
 import com.mycompany.cnpm_n1.dao.BaoCaoDAO;
+import com.mycompany.cnpm_n1.util.PermissionManager;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -12,6 +13,13 @@ public class frmBaoCao extends JFrame {
     public frmBaoCao() {
         super("Báo Cáo Quản Lý KTX");
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
+        if (!PermissionManager.canViewBaoCao()) {
+            JOptionPane.showMessageDialog(null, "Bạn không có quyền xem báo cáo", 
+                "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            dispose();
+            return;
+        }
 
         // Thêm menu bar
         setJMenuBar(MenuBarFactory.createMenuBar());
