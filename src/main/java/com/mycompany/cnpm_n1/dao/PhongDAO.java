@@ -88,7 +88,26 @@ public class PhongDAO {
         return list;
     }
 
-    // Thêm phòng
+    // Lấy phòng ID từ hợp đồng ID
+    public static int getPhongIdByHopDongId(int hopDongId) {
+        String sql = "SELECT phong_id FROM hop_dong WHERE id = ?";
+
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setInt(1, hopDongId);
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+                return rs.getInt("phong_id");
+            }
+            rs.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
+        // Thêm phòng
     public static boolean themPhong(Phong p) {
         String sql = "INSERT INTO phong (toa_nha_id, loai_phong_id, so_phong, tang, so_nguoi, trang_thai) " +
                      "VALUES (?, ?, ?, ?, ?, ?)";

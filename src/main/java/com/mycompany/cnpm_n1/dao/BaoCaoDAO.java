@@ -15,7 +15,7 @@ public class BaoCaoDAO {
         
         try (Connection conn = DatabaseConnection.getConnection()) {
             // Tổng số phòng
-            Statement stmt = conn.createStatement();
+            Statement stmt = conn.createStatement();        
             ResultSet rs = stmt.executeQuery("SELECT COUNT(*) as total FROM phong");
             if (rs.next()) stats.put("tongPhong", rs.getInt("total"));
             rs.close();
@@ -55,14 +55,17 @@ public class BaoCaoDAO {
         Map<String, Object> report = new HashMap<>();
         
         try (Connection conn = DatabaseConnection.getConnection()) {
-            String sql = "SELECT DATE_TRUNC('month', thang) as thang, " +
+            String sql = "SELECT DATE_FORMAT(thang, '%Y-%m') as thang_key, " +
+                         "DATE_FORMAT(thang, '%m/%Y') as thang_display, " +
                          "SUM(tien_phong) as tien_phong, " +
                          "SUM(tien_dien) as tien_dien, " +
                          "SUM(tien_nuoc) as tien_nuoc, " +
                          "SUM(tong_tien) as tong_tien, " +
                          "SUM(CASE WHEN trang_thai='da_tra' THEN tong_tien ELSE 0 END) as tien_da_tra, " +
                          "SUM(CASE WHEN trang_thai='chua_tra' THEN tong_tien ELSE 0 END) as tien_chua_tra " +
-                         "FROM hoa_don GROUP BY DATE_TRUNC('month', thang) ORDER BY thang DESC";
+                         "FROM hoa_don " +
+                         "GROUP BY DATE_FORMAT(thang, '%Y-%m'), DATE_FORMAT(thang, '%m/%Y') " +
+                         "ORDER BY thang_key DESC";
             
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
@@ -70,7 +73,7 @@ public class BaoCaoDAO {
             int count = 0;
             while (rs.next() && count < 12) {
                 Map<String, Object> row = new HashMap<>();
-                row.put("thang", rs.getDate("thang"));
+                row.put("thang", rs.getString("thang_display"));
                 row.put("tienPhong", rs.getBigDecimal("tien_phong"));
                 row.put("tienDien", rs.getBigDecimal("tien_dien"));
                 row.put("tienNuoc", rs.getBigDecimal("tien_nuoc"));
@@ -101,8 +104,8 @@ public class BaoCaoDAO {
                          "GROUP_CONCAT(sv.ho_ten SEPARATOR ', ') as sinh_vien " +
                          "FROM phong p " +
                          "LEFT JOIN loai_phong ln ON p.loai_phong_id = ln.id " +
-                         "LEFT JOIN sinh_vien sv ON p.id IN " +
-                         "  (SELECT phong_id FROM hop_dong WHERE sinh_vien_id = sv.id AND trang_thai = 'hieu_luc') " +
+                         "LEFT JOIN hop_dong hd ON p.id = hd.phong_id AND hd.trang_thai = 'hieu_luc' " +
+                         "LEFT JOIN sinh_vien sv ON hd.sinh_vien_id = sv.id " +
                          "GROUP BY p.id, p.so_phong, ln.ten_loai, p.so_nguoi, ln.suc_chua " +
                          "ORDER BY p.so_phong";
             

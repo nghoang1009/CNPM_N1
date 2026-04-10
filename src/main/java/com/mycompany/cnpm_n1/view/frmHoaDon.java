@@ -275,11 +275,20 @@ public class frmHoaDon extends JFrame {
             BigDecimal tongTien = tienPhong.add(tienDien).add(tienNuoc);
             String trangThai = (String) cboTrangThai.getSelectedItem();
 
-            HoaDon hd = new HoaDon(hopDongId, sinhVienId, 0, thang, tienPhong, tienDien, tienNuoc, tongTien, trangThai);
+            // Lấy phongId từ hợp đồng
+            int phongId = PhongDAO.getPhongIdByHopDongId(hopDongId);
+            if (phongId <= 0) {
+                JOptionPane.showMessageDialog(this, "Lỗi: Không tìm thấy phòng cho hợp đồng này!");
+                return;
+            }
+
+            HoaDon hd = new HoaDon(hopDongId, sinhVienId, phongId, thang, tienPhong, tienDien, tienNuoc, tongTien, trangThai);
             if (HoaDonDAO.themHoaDon(hd)) {
                 JOptionPane.showMessageDialog(this, "Thêm hóa đơn thành công!");
                 clearForm();
                 loadDataFromDatabase();
+            } else {
+                JOptionPane.showMessageDialog(this, "Thêm hóa đơn thất bại!", "Lỗi", JOptionPane.ERROR_MESSAGE);
             }
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, "Lỗi: Số tiền phải là số!");
@@ -309,11 +318,20 @@ public class frmHoaDon extends JFrame {
             BigDecimal tongTien = tienPhong.add(tienDien).add(tienNuoc);
             String trangThai = (String) cboTrangThai.getSelectedItem();
 
-            HoaDon hd = new HoaDon(id, hopDongId, sinhVienId, 0, thang, tienPhong, tienDien, tienNuoc, tongTien, trangThai);
+            // Lấy phongId từ hợp đồng
+            int phongId = PhongDAO.getPhongIdByHopDongId(hopDongId);
+            if (phongId <= 0) {
+                JOptionPane.showMessageDialog(this, "Lỗi: Không tìm thấy phòng cho hợp đồng này!");
+                return;
+            }
+
+            HoaDon hd = new HoaDon(id, hopDongId, sinhVienId, phongId, thang, tienPhong, tienDien, tienNuoc, tongTien, trangThai);
             if (HoaDonDAO.suaHoaDon(hd)) {
                 JOptionPane.showMessageDialog(this, "Cập nhật hóa đơn thành công!");
                 clearForm();
                 loadDataFromDatabase();
+            } else {
+                JOptionPane.showMessageDialog(this, "Cập nhật hóa đơn thất bại!", "Lỗi", JOptionPane.ERROR_MESSAGE);
             }
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, "Lỗi: Số tiền phải là số!");
@@ -337,6 +355,8 @@ public class frmHoaDon extends JFrame {
                 JOptionPane.showMessageDialog(this, "Xóa hóa đơn thành công!");
                 clearForm();
                 loadDataFromDatabase();
+            } else {
+                JOptionPane.showMessageDialog(this, "Xóa hóa đơn thất bại!", "Lỗi", JOptionPane.ERROR_MESSAGE);
             }
         }
     }
