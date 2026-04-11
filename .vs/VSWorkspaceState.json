@@ -8,8 +8,9 @@
     "\\src\\main\\java\\com\\mycompany",
     "\\src\\main\\java\\com\\mycompany\\cnpm_n1",
     "\\src\\main\\java\\com\\mycompany\\cnpm_n1\\dao",
+    "\\src\\main\\java\\com\\mycompany\\cnpm_n1\\util",
     "\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view"
   ],
-  "SelectedNode": "\\ql_sinhvienktx.sql",
+  "SelectedNode": "\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\MenuBarFactory.java",
   "PreviewInSolutionExplorer": false
 }

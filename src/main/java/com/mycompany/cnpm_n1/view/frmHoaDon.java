@@ -30,6 +30,7 @@ public class frmHoaDon extends JFrame {
     private JComboBox<String> cboSinhVien, cboHopDong, cboTrangThai;
     private JSpinner spinThang;
     private Map<String, Integer> sinhVienMap, hopDongMap;
+    private SinhVien currentSinhVien;
 
     private static final DateTimeFormatter MONTH_FMT = DateTimeFormatter.ofPattern("MM/yyyy");
 

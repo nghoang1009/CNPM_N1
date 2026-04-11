@@ -21,10 +21,25 @@ public class MenuBarFactory {
         JMenuItem mPhong = new JMenuItem("QL Phòng");
         menuPhong.add(mPhong);
 
-        // Menu Hóa đơn
-        JMenu menuHoaDon = new JMenu("Hóa đơn");
-        JMenuItem mHoaDon = new JMenuItem("QL Hóa đơn");
-        menuHoaDon.add(mHoaDon);
+        // Menu Hóa đơn - Chỉ hiển thị cho Admin/Nhân viên
+        JMenu menuHoaDon = null;
+        JMenuItem mHoaDon = null;
+        
+        // Menu Thanh toán - Chỉ cho Sinh viên
+        JMenu menuThanhToan = null;
+        JMenuItem mThanhToan = null;
+
+        if (PermissionManager.isAdminOrNhanVien()) {
+            // Admin/Nhân viên: hiển thị menu "Hóa đơn"
+            menuHoaDon = new JMenu("Hóa đơn");
+            mHoaDon = new JMenuItem("QL Hóa đơn");
+            menuHoaDon.add(mHoaDon);
+        } else if (PermissionManager.isSinhVien()) {
+            // Sinh viên: hiển thị menu "Thanh toán"
+            menuThanhToan = new JMenu("Thanh toán");
+            mThanhToan = new JMenuItem("Thanh toán hóa đơn");
+            menuThanhToan.add(mThanhToan);
+        }
 
         // Menu Hợp Đồng
         JMenu menuHopDong = new JMenu("Hợp Đồng");
@@ -56,13 +71,20 @@ public class MenuBarFactory {
             menuBar.add(menuSinhVien);
         }
         
-        // Chỉ Quản lý mới quản lý Phòng (Sinh viên chỉ xem)
+        // Chỉ Quản lý mới quản lý Phòng
         if (PermissionManager.isAdminOrNhanVien()) {
             menuBar.add(menuPhong);
         }
         
-        // Ai cũng xem được Hóa đơn (Sinh viên thanh toán)
-        menuBar.add(menuHoaDon);
+        // Hóa đơn - chỉ Admin/Nhân viên
+        if (menuHoaDon != null) {
+            menuBar.add(menuHoaDon);
+        }
+        
+        // Thanh toán - chỉ Sinh viên
+        if (menuThanhToan != null) {
+            menuBar.add(menuThanhToan);
+        }
         
         // Ai cũng xem được Hợp đồng
         menuBar.add(menuHopDong);
@@ -131,14 +153,22 @@ public class MenuBarFactory {
             }
         });
 
-        mHoaDon.addActionListener(e -> {
-            if (PermissionManager.canViewHoaDon()) {
-                new frmHoaDon().setVisible(true);
-            } else {
-                JOptionPane.showMessageDialog(null, "Bạn không có quyền truy cập mục này!", 
-                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
-            }
-        });
+        if (mHoaDon != null) {
+            mHoaDon.addActionListener(e -> {
+                if (PermissionManager.isAdminOrNhanVien()) {
+                    new frmHoaDon().setVisible(true);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Bạn không có quyền truy cập mục này!", 
+                        "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+                }
+            });
+        }
+
+        if (mThanhToan != null) {
+            mThanhToan.addActionListener(e -> {
+                new frmThanhToanHoaDon().setVisible(true);
+            });
+        }
 
         mHopDong.addActionListener(e -> {
             if (PermissionManager.canViewHopDong()) {

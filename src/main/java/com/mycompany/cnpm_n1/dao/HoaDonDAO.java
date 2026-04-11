@@ -74,6 +74,30 @@ public class HoaDonDAO {
         return list;
     }
 
+    // Lấy hóa đơn chưa trả của sinh viên
+    public static List<HoaDon> getHoaDonChuaTraBySinhVienId(int sinhVienId) {
+        List<HoaDon> list = new ArrayList<>();
+        String sql = "SELECT id, hop_dong_id, sinh_vien_id, phong_id, thang, " +
+                     "tien_phong, tien_dien, tien_nuoc, tong_tien, trang_thai " +
+                     "FROM hoa_don WHERE sinh_vien_id = ? AND trang_thai = 'chua_tra' " +
+                     "ORDER BY thang DESC";
+
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setInt(1, sinhVienId);
+            ResultSet rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                list.add(mapRow(rs));
+            }
+            rs.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
     // Lấy hóa đơn chưa trả
     public static List<HoaDon> getHoaDonChuaTra() {
         List<HoaDon> list = new ArrayList<>();

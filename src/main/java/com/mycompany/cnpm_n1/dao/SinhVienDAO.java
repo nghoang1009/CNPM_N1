@@ -50,6 +50,27 @@ public class SinhVienDAO {
         return null;
     }
 
+    // Lấy sinh viên theo tài khoản ID
+    public static SinhVien getSinhVienByTaiKhoanId(int taiKhoanId) {
+        String sql = "SELECT id, tai_khoan_id, ma_sinh_vien, ho_ten, gioi_tinh, " +
+                     "ngay_sinh, so_dien_thoai, truong FROM sinh_vien WHERE tai_khoan_id = ?";
+
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setInt(1, taiKhoanId);
+            ResultSet rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                return mapRow(rs);
+            }
+            rs.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     // Thêm sinh viên
     public static boolean themSinhVien(SinhVien sv) {
         String sql = "INSERT INTO sinh_vien (tai_khoan_id, ma_sinh_vien, ho_ten, gioi_tinh, " +

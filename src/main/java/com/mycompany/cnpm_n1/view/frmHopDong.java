@@ -26,6 +26,7 @@ public class frmHopDong extends JFrame {
     private JTextField txtId, txtNgayBatDau, txtNgayKetThuc;
     private JComboBox<String> cboSinhVien, cboPhong, cboTrangThai;
     private Map<String, Integer> sinhVienMap, phongMap;
+    private SinhVien currentSinhVien;
 
     private static final DateTimeFormatter DATE_FMT = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
@@ -47,6 +48,11 @@ public class frmHopDong extends JFrame {
         // ── Load lookup maps ──
         sinhVienMap = SinhVienDAO.getSinhVienMap();
         phongMap = PhongDAO.getPhongMap();
+
+        // Lấy thông tin sinh viên hiện tại nếu là sinh viên
+        if (PermissionManager.isSinhVien()) {
+            currentSinhVien = SinhVienDAO.getSinhVienByTaiKhoanId(PermissionManager.getCurrentUserId());
+        }
 
         // ════════════════════════════════════════
         // PANEL GIỮA: Bảng danh sách
@@ -130,16 +136,43 @@ public class frmHopDong extends JFrame {
         JButton btnEdit = new JButton("Cập nhật");
         JButton btnDelete = new JButton("Xóa");
         JButton btnClear = new JButton("Làm mới");
+        JButton btnRefresh = new JButton("Refresh");
 
         btnPanel.add(btnAdd);
         btnPanel.add(btnEdit);
         btnPanel.add(btnDelete);
         btnPanel.add(btnClear);
+        btnPanel.add(btnRefresh);
 
-        btnAdd.addActionListener(e -> handleThemHopDong());
-        btnEdit.addActionListener(e -> handleSuaHopDong());
-        btnDelete.addActionListener(e -> handleXoaHopDong());
+        btnAdd.addActionListener(e -> {
+            if (PermissionManager.canEditHopDong()) {
+                handleThemHopDong();
+            } else {
+                JOptionPane.showMessageDialog(this, "Bạn không có quyền thêm hợp đồng", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
+        });
+
+        btnEdit.addActionListener(e -> {
+            if (PermissionManager.canEditHopDong()) {
+                handleSuaHopDong();
+            } else {
+                JOptionPane.showMessageDialog(this, "Bạn không có quyền sửa hợp đồng", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
+        });
+
+        btnDelete.addActionListener(e -> {
+            if (PermissionManager.canEditHopDong()) {
+                handleXoaHopDong();
+            } else {
+                JOptionPane.showMessageDialog(this, "Bạn không có quyền xóa hợp đồng", 
+                    "Lỗi phân quyền", JOptionPane.ERROR_MESSAGE);
+            }
+        });
+
         btnClear.addActionListener(e -> clearForm());
+        btnRefresh.addActionListener(e -> loadDataFromDatabase());
 
         // ════════════════════════════════════════
         // Layout chính
@@ -154,11 +187,35 @@ public class frmHopDong extends JFrame {
         setSize(900, 600);
         setLocationRelativeTo(null);
         loadDataFromDatabase();
+
+        // Xử lý giao diện cho sinh viên
+        if (PermissionManager.isSinhVien()) {
+            // Ẩn các nút thêm/sửa/xóa
+            btnAdd.setVisible(false);
+            btnEdit.setVisible(false);
+            btnDelete.setVisible(false);
+
+            // Vô hiệu hóa form edit
+            for (java.awt.Component comp : formPanel.getComponents()) {
+                if (comp != null && !(comp instanceof JLabel)) {
+                    comp.setEnabled(false);
+                }
+            }
+        }
     }
 
     private void loadDataFromDatabase() {
         tableModel.setRowCount(0);
-        List<HopDong> list = HopDongDAO.getAllHopDong();
+        List<HopDong> list;
+
+        // Sinh viên chỉ xem hợp đồng của mình
+        if (PermissionManager.isSinhVien() && currentSinhVien != null) {
+            list = HopDongDAO.getHopDongBySinhVienId(currentSinhVien.getId());
+        } else {
+            // Admin/Nhân viên xem tất cả hợp đồng
+            list = HopDongDAO.getAllHopDong();
+        }
+
         for (HopDong hd : list) {
             SinhVien sv = SinhVienDAO.getSinhVienById(hd.getSinhVienId());
             Phong p = PhongDAO.getPhongById(hd.getPhongId());

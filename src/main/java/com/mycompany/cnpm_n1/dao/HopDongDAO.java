@@ -1,4 +1,4 @@
-package com.mycompany.cnpm_n1.dao;
+   package com.mycompany.cnpm_n1.dao;
 
 import com.mycompany.cnpm_n1.DatabaseConnection;
 import com.mycompany.cnpm_n1.model.HopDong;

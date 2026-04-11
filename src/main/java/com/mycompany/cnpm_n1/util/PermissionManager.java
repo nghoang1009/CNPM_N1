@@ -110,17 +110,17 @@ public class PermissionManager {
     
     // Kiểm tra quyền xem hóa đơn
     public static boolean canViewHoaDon() {
-        return true; // Ai cũng xem được
+        return isAdminOrNhanVien() || isSinhVien();
     }
     
-    // Kiểm tra quyền thêm/sửa/xóa hóa đơn
+    // Kiểm tra quyền thêm/sửa/xóa hóa đơn (chỉ Admin hoặc Nhân viên)
     public static boolean canEditHoaDon() {
         return isAdmin() || isNhanVien();
     }
     
-    // Kiểm tra quyền thanh toán/cập nhật trạng thái hóa đơn (sinh viên)
+    // Kiểm tra quyền thanh toán hóa đơn (chỉ Sinh viên)
     public static boolean canPayHoaDon() {
-        return isAdminOrNhanVien() || isSinhVien();
+        return isSinhVien();
     }
     
     // ════════════════════════════════════════
