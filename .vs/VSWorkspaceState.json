@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\main",
-    "\\src\\main\\java",
-    "\\src\\main\\java\\com",
-    "\\src\\main\\java\\com\\mycompany",
-    "\\src\\main\\java\\com\\mycompany\\cnpm_n1",
-    "\\src\\main\\java\\com\\mycompany\\cnpm_n1\\dao",
-    "\\src\\main\\java\\com\\mycompany\\cnpm_n1\\util",
-    "\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view"
+    "\\src\\test",
+    "\\src\\test\\java",
+    "\\src\\test\\java\\com",
+    "\\src\\test\\java\\com\\mycompany",
+    "\\src\\test\\java\\com\\mycompany\\cnpm_n1",
+    "\\src\\test\\java\\com\\mycompany\\cnpm_n1\\dao",
+    "\\target",
+    "\\target\\test-classes"
   ],
-  "SelectedNode": "\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\MenuBarFactory.java",
+  "SelectedNode": "\\pom.xml",
   "PreviewInSolutionExplorer": false
 }

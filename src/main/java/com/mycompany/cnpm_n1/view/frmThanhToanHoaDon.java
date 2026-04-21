@@ -1,4 +1,4 @@
-﻿package com.mycompany.cnpm_n1.view;
+package com.mycompany.cnpm_n1.view;
 
 import com.mycompany.cnpm_n1.dao.HoaDonDAO;
 import com.mycompany.cnpm_n1.dao.SinhVienDAO;

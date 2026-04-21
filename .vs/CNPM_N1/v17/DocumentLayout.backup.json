@@ -3,6 +3,46 @@
   "WorkspaceRootPath": "C:\\Download\\CNPM_N1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Download\\CNPM_N1\\src\\test\\java\\com\\mycompany\\cnpm_n1\\dao\\SinhVienDAOTest.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\test\\java\\com\\mycompany\\cnpm_n1\\dao\\SinhVienDAOTest.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Download\\CNPM_N1\\pom.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:pom.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\MenuBarFactory.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\MenuBarFactory.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\HopDongDAO.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\HopDongDAO.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHopDong.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHopDong.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHoaDon.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHoaDon.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\util\\PermissionManager.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\mycompany\\cnpm_n1\\util\\PermissionManager.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmThanhToanHoaDon.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmThanhToanHoaDon.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\SinhVienDAO.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\SinhVienDAO.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\HoaDonDAO.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\HoaDonDAO.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Download\\CNPM_N1\\ql_sinhvienktx.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ql_sinhvienktx.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
@@ -15,28 +55,12 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmBaoCao.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHoaDon.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHoaDon.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\PhongDAO.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\PhongDAO.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\HoaDonDAO.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\HoaDonDAO.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHopDong.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHopDong.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmLogin.java||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmLogin.java||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Download\\CNPM_N1\\ql_sinhvienktx.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ql_sinhvienktx.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -75,30 +99,116 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ql_sinhvienktx.sql ",
-              "DocumentMoniker": "C:\\Download\\CNPM_N1\\ql_sinhvienktx.sql",
-              "RelativeDocumentMoniker": "ql_sinhvienktx.sql",
-              "ToolTip": "ql_sinhvienktx.sql ",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-04-10T09:15:54.313Z",
+              "Title": "SinhVienDAOTest.java",
+              "DocumentMoniker": "C:\\Download\\CNPM_N1\\src\\test\\java\\com\\mycompany\\cnpm_n1\\dao\\SinhVienDAOTest.java",
+              "RelativeDocumentMoniker": "src\\test\\java\\com\\mycompany\\cnpm_n1\\dao\\SinhVienDAOTest.java",
+              "ToolTip": "C:\\Download\\CNPM_N1\\src\\test\\java\\com\\mycompany\\cnpm_n1\\dao\\SinhVienDAOTest.java",
+              "RelativeToolTip": "src\\test\\java\\com\\mycompany\\cnpm_n1\\dao\\SinhVienDAOTest.java",
+              "ViewState": "AgIAAPIAAAAAAAAAAAAAAP0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-12T08:58:47.04Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BaoCaoDAO.java",
-              "DocumentMoniker": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\BaoCaoDAO.java",
-              "RelativeDocumentMoniker": "src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\BaoCaoDAO.java",
-              "ToolTip": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\BaoCaoDAO.java",
-              "RelativeToolTip": "src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\BaoCaoDAO.java",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAACwAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-10T09:05:35.427Z",
+              "Title": "pom.xml",
+              "DocumentMoniker": "C:\\Download\\CNPM_N1\\pom.xml",
+              "RelativeDocumentMoniker": "pom.xml",
+              "ToolTip": "C:\\Download\\CNPM_N1\\pom.xml",
+              "RelativeToolTip": "pom.xml",
+              "ViewState": "AgIAAA0AAAAAAAAAAIAwwCoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-04-12T08:24:14.468Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "MenuBarFactory.java",
+              "DocumentMoniker": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\MenuBarFactory.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\MenuBarFactory.java",
+              "ToolTip": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\MenuBarFactory.java",
+              "RelativeToolTip": "src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\MenuBarFactory.java",
+              "ViewState": "AgIAAHkAAAAAAAAAAAD4vxgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-11T20:06:37.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PermissionManager.java",
+              "DocumentMoniker": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\util\\PermissionManager.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\mycompany\\cnpm_n1\\util\\PermissionManager.java",
+              "ToolTip": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\util\\PermissionManager.java",
+              "RelativeToolTip": "src\\main\\java\\com\\mycompany\\cnpm_n1\\util\\PermissionManager.java",
+              "ViewState": "AgIAAGYAAAAAAAAAAAD4vwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-11T20:04:05.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmThanhToanHoaDon.java",
+              "DocumentMoniker": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmThanhToanHoaDon.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmThanhToanHoaDon.java",
+              "ToolTip": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmThanhToanHoaDon.java",
+              "RelativeToolTip": "src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmThanhToanHoaDon.java",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-11T20:03:49.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SinhVienDAO.java",
+              "DocumentMoniker": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\SinhVienDAO.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\SinhVienDAO.java",
+              "ToolTip": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\SinhVienDAO.java",
+              "RelativeToolTip": "src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\SinhVienDAO.java",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-11T20:03:17.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HopDongDAO.java",
+              "DocumentMoniker": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\HopDongDAO.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\HopDongDAO.java",
+              "ToolTip": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\HopDongDAO.java",
+              "RelativeToolTip": "src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\HopDongDAO.java",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-11T20:00:03.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ql_sinhvienktx.sql",
+              "DocumentMoniker": "C:\\Download\\CNPM_N1\\ql_sinhvienktx.sql",
+              "RelativeDocumentMoniker": "ql_sinhvienktx.sql",
+              "ToolTip": "C:\\Download\\CNPM_N1\\ql_sinhvienktx.sql",
+              "RelativeToolTip": "ql_sinhvienktx.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-04-10T09:15:54.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmHopDong.java",
+              "DocumentMoniker": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHopDong.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHopDong.java",
+              "ToolTip": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHopDong.java",
+              "RelativeToolTip": "src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHopDong.java",
+              "ViewState": "AgIAAMEAAAAAAAAAAAAkwCgAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-09T18:51:16.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "frmBaoCao.java",
               "DocumentMoniker": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmBaoCao.java",
               "RelativeDocumentMoniker": "src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmBaoCao.java",
@@ -106,12 +216,35 @@
               "RelativeToolTip": "src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmBaoCao.java",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-10T09:03:03.703Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-10T09:03:03.703Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
+              "Title": "frmHoaDon.java",
+              "DocumentMoniker": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHoaDon.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHoaDon.java",
+              "ToolTip": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHoaDon.java",
+              "RelativeToolTip": "src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHoaDon.java",
+              "ViewState": "AgIAAMgAAAAAAAAAAAAAAOUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-10T08:51:49.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BaoCaoDAO.java",
+              "DocumentMoniker": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\BaoCaoDAO.java",
+              "RelativeDocumentMoniker": "src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\BaoCaoDAO.java",
+              "ToolTip": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\BaoCaoDAO.java",
+              "RelativeToolTip": "src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\BaoCaoDAO.java",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAACwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-10T09:05:35.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "PhongDAO.java",
               "DocumentMoniker": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\PhongDAO.java",
               "RelativeDocumentMoniker": "src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\PhongDAO.java",
@@ -119,51 +252,23 @@
               "RelativeToolTip": "src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\PhongDAO.java",
               "ViewState": "AgIAAFkAAAAAAAAAAAAAAG0AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-10T09:01:25.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-10T09:01:25.254Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "HoaDonDAO.java",
               "DocumentMoniker": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\HoaDonDAO.java",
               "RelativeDocumentMoniker": "src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\HoaDonDAO.java",
               "ToolTip": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\HoaDonDAO.java",
               "RelativeToolTip": "src\\main\\java\\com\\mycompany\\cnpm_n1\\dao\\HoaDonDAO.java",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAwwLQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAMwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-10T08:58:31.526Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-10T08:58:31.526Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmHoaDon.java",
-              "DocumentMoniker": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHoaDon.java",
-              "RelativeDocumentMoniker": "src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHoaDon.java",
-              "ToolTip": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHoaDon.java",
-              "RelativeToolTip": "src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHoaDon.java",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcBAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-10T08:51:49.761Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmHopDong.java",
-              "DocumentMoniker": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHopDong.java",
-              "RelativeDocumentMoniker": "src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHopDong.java",
-              "ToolTip": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHopDong.java",
-              "RelativeToolTip": "src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmHopDong.java",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-09T18:51:16.323Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "frmLogin.java",
               "DocumentMoniker": "C:\\Download\\CNPM_N1\\src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmLogin.java",
               "RelativeDocumentMoniker": "src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmLogin.java",
@@ -171,8 +276,7 @@
               "RelativeToolTip": "src\\main\\java\\com\\mycompany\\cnpm_n1\\view\\frmLogin.java",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-09T18:51:06.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-09T18:51:06.075Z"
             }
           ]
         }
